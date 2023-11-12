@@ -119,4 +119,18 @@ colors <- table(diamonds$color)
 colors
 barplot(colors, col="#CC0000")
 
+hist(diamonds$carat,
+     breaks=20, col="#990066")
 
+clarity <- table(diamonds$clarity)
+clarity
+barplot(clarity, col="#A5260A", 
+        xlab = "clarity")
+
+cut <- table(diamonds$cut)
+cut
+labels <- c("Fair", "Good", "Ideal", "Premium", "Very Good")
+pie(cut, labels)
+
+dev.off()   # Очищение области графиков
+rm(list=ls())   # Очищение области переменных
